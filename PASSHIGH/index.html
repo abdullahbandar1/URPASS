@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>مولّد كلمات مرور آمنة</title>
+  <!-- Cairo + Font Awesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- هيدر مع أيقونة الحفظ -->
+    <div class="header">
+      <h1>مولّد كلمات مرور آمنة</h1>
+      <div id="bookmarkIcon" title="عرض المحفوظات">
+        <i class="fa-solid fa-bookmark"></i>
+      </div>
+    </div>
+
+    <button id="generateBtn">توليد كلمة المرور</button>
+
+    <div id="loader" class="hidden">
+      <p id="stepText"></p>
+      <div class="bar"><div class="progress"></div></div>
+      <p id="percentText">0%</p>
+    </div>
+
+    <div id="result" class="hidden">
+      <p>وهذي كلمة المرور الخاصة بك 🎉:</p>
+      <code id="password"></code>
+      <div class="actions">
+        <button id="copyBtn">نسخ</button>
+        <button id="saveBtn">حفظ</button>
+      </div>
+      <span id="copyMsg" class="hidden">تم النسخ!</span>
+    </div>
+
+    <!-- Modal محفوظات -->
+    <div id="savedSection" class="hidden">
+      <div id="savedContent">
+        <div id="savedHeader">
+          <h2>كلمات المرور المحفوظة</h2>
+          <i id="closeSaved" class="fa-solid fa-times" title="إغلاق"></i>
+        </div>
+        <div id="savedList"></div>
+      </div>
+    </div>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
