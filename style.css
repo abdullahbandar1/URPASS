@@ -1,0 +1,177 @@
+/* عام */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: #1e1e1e;
+  color: #c0c0c0;
+  font-family: 'Cairo', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.container {
+  position: relative;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  padding: 20px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.header h1 {
+  flex: 1;
+  color: #61dafb;
+  text-align: center;
+}
+#bookmarkIcon {
+  cursor: pointer;
+  font-size: 1.4em;
+  color: #61dafb;
+  margin-left: auto;
+}
+#bookmarkIcon:hover { color: #fff; }
+
+/* زر التوليد */
+#generateBtn {
+  background: #282c34;
+  color: #c0c0c0;
+  border: 2px solid #61dafb;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-size: 1em;
+}
+#generateBtn:hover {
+  background: #61dafb;
+  color: #1e1e1e;
+}
+
+/* اللودر */
+#loader {
+  margin-top: 20px;
+}
+.hidden { display: none !important; }
+.bar {
+  width: 100%;
+  height: 10px;
+  background: #333;
+  margin: 10px auto;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.progress {
+  width: 0;
+  height: 100%;
+  background: #61dafb;
+  transition: width 0.1s linear;
+}
+#percentText {
+  margin-top: 5px;
+  font-size: 0.9em;
+}
+
+/* النتيجة */
+#result {
+  background: #282c34;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+code {
+  display: block;
+  background: #1e1e1e;
+  padding: 10px;
+  margin: 10px auto;
+  word-break: break-all;
+  font-size: 1.1em;
+}
+.actions {
+  margin-top: 10px;
+}
+.actions button {
+  background: transparent;
+  border: 1px solid #61dafb;
+  color: #61dafb;
+  padding: 5px 15px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.actions button:hover {
+  background: #61dafb;
+  color: #1e1e1e;
+}
+#copyMsg {
+  display: inline-block;
+  margin-top: 10px;
+  color: #0f0;
+  font-size: 0.9em;
+}
+
+/* Modal المحفوظات */
+#savedSection {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+#savedContent {
+  background: #1e1e1e;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  overflow: hidden;
+}
+#savedHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: #282c34;
+}
+#savedHeader h2 { color: #61dafb; margin: 0; }
+#closeSaved {
+  cursor: pointer;
+  color: #c0c0c0;
+  font-size: 1.2em;
+}
+#closeSaved:hover { color: #fff; }
+#savedList {
+  padding: 10px;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+.saved-item {
+  background: #282c34;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.saved-item code {
+  background: transparent;
+  padding: 0;
+  font-size: 0.95em;
+}
+.saved-item button {
+  background: transparent;
+  border: 1px solid #61dafb;
+  color: #61dafb;
+  padding: 3px 8px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+.saved-item button:hover {
+  background: #61dafb;
+  color: #1e1e1e;
+}
